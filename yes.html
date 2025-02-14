@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Love Video</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        background-color: #fce4ec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      h1 {
+        color: #d81b60;
+        display: none;
+        font-size: 2.5rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .image {
+        display: none;
+        max-width: 300px;
+        height: auto;
+      }
+      video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <video controls id="loveVideo" onended="showMessage()">
+      <source src="./Thiết kế chưa có tên.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h1 id="loveMessage">I Love You ❤️</h1>
+
+    <script>
+      function showMessage() {
+        document.getElementById("loveMessage").style.display = "block";
+        document.getElementById("loveImage").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
